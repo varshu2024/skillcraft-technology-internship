@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+.game-mode {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.game-info {
+    margin: 20px 0;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    min-height: 24px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#twoPlayer, #vsComputer, #restart {
+    background-color: #af4ca5;
+    color: white;
+}
+
+#twoPlayer:hover, #vsComputer:hover, #restart:hover {
+    background-color: #a0457d;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+.cell {
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.cell.x {
+    color: #f44336;
+}
+
+.cell.o {
+    color: #2196F3;
+}
+
+.winning-cell {
+    background-color: #e8f5e9;
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { background-color: #e8f5e9; }
+    to { background-color: #c8e6c9; }
+}
